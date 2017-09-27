@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { DataTableModule } from 'angular-4-data-table-bootstrap-4';
 
 import { AppComponent } from './app.component';
 import { ContactenComponent } from './components/contacten/contacten.component';
@@ -29,8 +28,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule,
-    DataTableModule
+    HttpClientModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
