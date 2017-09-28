@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Varela Round";
+    src: url(VarelaRound-Regular.ttf);
+}
+body{
+	background-color:#EAD11B;
+	color:#1e1e1e;
+	font-family: "Varela Round";
+}
+	
+table{
+	margin-top:20px;
+}
