@@ -1,3 +1,24 @@
-<p>
-  contacten works!
-</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Naam</th>
+      <th>Adres</th>
+      <th>E-mail</th>
+      <th>Telefoon</th>
+      <th>Fax</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contact of contacten">
+      <td>{{contact.id}}</td>
+      <td>{{contact.name}}</td>
+      <td>{{contact.address}}</td>
+      <td>{{contact.email}}</td>
+      <td>{{contact.phone}}</td>
+      <td>{{contact.fax}}</td>
+      <td>{{contact.website}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,3 +1,24 @@
-<p>
-  bedrijven works!
-</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Naam</th>
+      <th>Adres</th>
+      <th>E-mail</th>
+      <th>Telefoon</th>
+      <th>Fax</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let bedrijf of bedrijven">
+      <td>{{bedrijf.id}}</td>
+      <td>{{bedrijf.companyName}}</td>
+      <td>{{bedrijf.address}}</td>
+      <td>{{bedrijf.email}}</td>
+      <td>{{bedrijf.phone}}</td>
+      <td>{{bedrijf.fax}}</td>
+      <td>{{bedrijf.website}}</td>
+    </tr>
+  </tbody>
+</table>

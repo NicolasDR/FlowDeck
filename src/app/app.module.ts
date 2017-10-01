@@ -10,6 +10,7 @@ import { BedrijvenComponent } from './components/bedrijven/bedrijven.component';
 import { FacturenComponent } from './components/facturen/facturen.component';
 
 import { DataService } from './services/data.service';
+import { ActionsComponent } from './components/actions/actions.component';
 
 const appRoutes: Routes = [
   { path: 'bedrijven', component: BedrijvenComponent },
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     AppComponent,
     BedrijvenComponent,
     ContactenComponent,
-    FacturenComponent
+    FacturenComponent,
+    ActionsComponent
   ],
   imports: [
     BrowserModule,

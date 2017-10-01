@@ -15,4 +15,12 @@ export class DataService {
     return this.http.get('https://flowdeck.be/datasrc/facturen.php');
   }
 
+  getContacten(){
+    return this.http.get('https://flowdeck.be/datasrc/contacten.php');
+  }
+
+  getBedrijven(){
+    return this.http.get('https://flowdeck.be/datasrc/bedrijven.php');
+  }
+
 }
