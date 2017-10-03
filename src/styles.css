@@ -11,11 +11,31 @@ body{
 
 h1{
   margin-top: 50px;
+  text-align: center;
+}
+
+#nav_container{
+  text-align: center;
+  padding: 20px 0;
+}
+
+#ctrls_container{
+  text-align: right;
+  padding-top: 55px;
+}
+
+#ctrls_container i{
+  line-height: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
 }
 
 nav{
-  margin-top: 20px;
-  margin-left: -10px;
+  display: inline-block;
 }
 
 nav a{

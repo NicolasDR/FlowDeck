@@ -7,9 +7,7 @@ import { Factuur } from '../models/factuur';
 export class DataService {
 
 
-  constructor(public http: HttpClient) {
-    console.log("data service connected...");
-  }
+  constructor(public http: HttpClient) {}
 
   getFacturen(){
     return this.http.get('https://flowdeck.be/datasrc/facturen.php');
@@ -21,6 +19,10 @@ export class DataService {
 
   getBedrijven(){
     return this.http.get('https://flowdeck.be/datasrc/bedrijven.php');
+  }
+
+  insertContact(c){
+    this.http.post('https://flowdeck.be/datasrc/insert_contact.php', c);
   }
 
 }

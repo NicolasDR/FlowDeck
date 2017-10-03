@@ -1,0 +1,64 @@
+<div class="col-md-12">
+  <h2>Nieuw contact toevoegen</h2>
+</div>
+<form #contactForm="ngForm" (ngSubmit)="contactToevoegen(contactForm)">
+  <div class="form-group col-md-6">
+    <label for="ci_name">Naam</label>
+    <input ngModel type="text" class="form-control" name="name" id="ci_name" placeholder="">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="ci_firstName">Voornaam</label>
+    <input ngModel  type="text" class="form-control" name="firstName" id="ci_firstName" placeholder="">
+  </div>
+  <div class="form-group col-md-8">
+    <label for="ci_street">Straat</label>
+    <input ngModel  type="text" class="form-control" name="street" id="ci_street" placeholder="">
+  </div>
+  <div class="form-group col-md-4">
+    <label for="ci_houseNumber">Huisnummer</label>
+    <input ngModel type="text" class="form-control" name="houseNumber" id="ci_houseNumber" placeholder="">
+  </div>
+  <div class="form-group col-md-8">
+    <label for="ci_city">Stad</label>
+    <input ngModel type="text" class="form-control" name="city" id="ci_city" placeholder="">
+  </div>
+  <div class="form-group col-md-4">
+    <label for="ci_postalCode">Postcode</label>
+    <input ngModel type="text" class="form-control" name="postalCode" id="ci_postalCode" placeholder="">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="ci_province">Provincie</label>
+    <input ngModel type="text" class="form-control" name="province" id="ci_province" placeholder="">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="ci_country">Land</label>
+    <input ngModel type="text" class="form-control" name="country" id="ci_country" placeholder="">
+  </div>
+  <div class="form-group col-md-12">
+    <label for="ci_email">E-mailadres</label>
+    <input ngModel type="email" class="form-control" name="email" id="ci_email" placeholder="">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="ci_phone">Telefoon</label>
+    <input ngModel type="text" class="form-control" name="phone" id="ci_phone" placeholder="">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="ci_fax">Fax</label>
+    <input ngModel type="text" class="form-control" name="fax" id="ci_fax" placeholder="">
+  </div>
+  <div class="form-group col-md-12">
+    <label for="ci_website">Website</label>
+    <input ngModel type="text" class="form-control" name="website" id="ci_website" placeholder="">
+  </div>
+  <div class="form-group col-md-8">
+    <label for="ci_iban">IBAN</label>
+    <input ngModel type="text" class="form-control" name="iban" id="ci_iban" placeholder="">
+  </div>
+  <div class="form-group col-md-4">
+    <label for="ci_bic">BIC</label>
+    <input ngModel type="text" class="form-control" name="bic" id="ci_bic" placeholder="">
+  </div>
+  <div class="col-md-6">
+  <button type="submit" class="btn btn-primary">Toevoegen</button>
+  </div>
+</form>
