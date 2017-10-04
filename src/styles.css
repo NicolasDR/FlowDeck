@@ -2,11 +2,27 @@
     font-family: "Varela Round";
     src: url(VarelaRound-Regular.ttf);
 }
+
 body{
-	background-color:white;
+	background-color:fafafa;
 	color:#1e1e1e;
 	font-family: "Varela Round";
-  padding-bottom: 100px;
+    padding-bottom: 100px;
+}
+
+.container{width:85%;}
+
+h1{display:inline-block; float:left; margin-bottom:40px; padding-top:5px;}
+
+.logo{
+	height:60px;	
+	margin-top: 42px;
+	margin-left:37%;
+}
+
+.home-icon{
+	height:21px;
+margin-left:-4%;
 }
 
 h1{
@@ -16,7 +32,7 @@ h1{
 
 #nav_container{
   text-align: center;
-  padding: 20px 0;
+  padding-top: 30px;
 }
 
 #ctrls_container{
@@ -34,18 +50,72 @@ h1{
   height: 40px;
 }
 
+#ctrls_container i:hover{
+ background-color:#444444;
+ color:white;
+}
+
 nav{
   display: inline-block;
+  background-color: #EAD11B;
+  width:100%;
+  height:35px;
+  text-align: center;
+  line-height: 35px; /* Same as height */
+  vertical-align: middle;
+  border-radius: 5px;
 }
 
 nav a{
-  padding: 10px;
+  padding: 0.5%;
+  color: #1e1e1e;
+  margin: 4%;
 }
+
+nav a:hover{
+	text-decoration: none;
+	color:white;
+	}
 
 table{
 	margin-top:50px;
 }
 
 h2{
-  margin-top: 187px;
+  margin-top: 100px;
 }
+
+thead tr{
+	display:block; float:left; width:100%; 
+}
+
+thead tr th{
+	display:block; float:left; width:13%; border:none;
+}
+
+tbody{;
+	margin-bottom:200px;
+	}
+
+tbody tr{
+	display:inline-block;
+	margin-top:10px;
+	background-color:white;
+	box-shadow: inset 0px 0px 1px #888888;
+    border-radius: 5px;
+	width:100%;	
+}
+
+tbody td {display:block; float:left; width:13%; }
+
+.pagename{display:block; float:left;}
+
+.change-menu #ctrls_container{ display:block; float:right;} 
+
+.fa-plus{background-color:#EAD11B; color:white; width:100px;}
+	
+#ctrls_container .fa-plus:hover {background-color:#EAD11B; margin-left:-70px;
+	width:70px;}
+	
+#information{width:90%; margin-right: 5%;
+    margin-left: 5%;}
