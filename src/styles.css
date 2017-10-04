@@ -3,6 +3,20 @@
     src: url(VarelaRound-Regular.ttf);
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #1e1e1e); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 3px #1e1e1e; 
+}
+
 body{
 	background-color:fafafa;
 	color:#1e1e1e;
@@ -65,18 +79,21 @@ nav{
   line-height: 35px; /* Same as height */
   vertical-align: middle;
   border-radius: 5px;
+  padding-right:0px;
 }
 
 nav a{
   padding: 0.5%;
   color: #1e1e1e;
-  margin: 4%;
+  margin: 3%;
 }
 
 nav a:hover{
 	text-decoration: none;
 	color:white;
 	}
+	
+nav a .fa{margin-right:20px; font-size:18px; }
 
 table{
 	margin-top:50px;
@@ -91,7 +108,7 @@ thead tr{
 }
 
 thead tr th{
-	display:block; float:left; width:13%; border:none;
+	display:block; float:left; width:13%; 
 }
 
 tbody{;
@@ -120,3 +137,8 @@ tbody td {display:block; float:left; width:13%; }
 	
 #information{width:80%; margin-right: 10%;
     margin-left: 10%;}
+	
+
+
+
+
