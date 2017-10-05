@@ -9,13 +9,15 @@ import { ContactService } from '../contact.service';
 })
 export class ContactNewComponent implements OnInit {
 
+  contacten: any;
+
   constructor(private contactService: ContactService) { }
 
   ngOnInit() {
+
   }
 
   contactToevoegen(form: any){
-
     var firstName = form.value.firstName;
     var name = form.value.name;
     var email = form.value.email;
@@ -31,12 +33,11 @@ export class ContactNewComponent implements OnInit {
     var city = form.value.city;
     var country = form.value.country;
 
-    var contact: Contact;
-
-    contact = new Contact(
+    var contact = new Contact(
       undefined,firstName,name,street,houseNumber,province,postalCode,city,country,email,phone,fax,website,iban,bic
     );
 
     this.contactService.create(contact);
   };
+
 }
