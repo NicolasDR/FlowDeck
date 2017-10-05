@@ -24,4 +24,10 @@ export class ContactListComponent implements OnInit {
     });
   }
 
+  deleteContact(c){
+    this.contactService.delete(c).subscribe(res=> {
+      this.getContacten();  // this is function who makes GET request
+    });
+  }
+
 }

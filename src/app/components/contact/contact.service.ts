@@ -14,7 +14,9 @@ export class ContactService {
 
   create(contact: Contact){
     return this.http.post(this.root + "/contacten", contact)
-    .subscribe();
+    .subscribe(success => {
+      this.getContacten()
+    })
   }
 
   update(contact: Contact){
@@ -22,11 +24,11 @@ export class ContactService {
   }
 
   delete(contact: Contact){
-    return this.http.put(this.root + "/contacten/" + contact.id , contact)
+    return this.http.delete(this.root + "/contacten/" + contact.id)
   }
 
   getContacten(){
-    return this.http.get(this.root + "/contacten");
+    return this.http.get(this.root + "/contacten")
   }
 
   getContact(contact: Contact){

@@ -8,6 +8,7 @@
       <th>Telefoon</th>
       <th>Fax</th>
       <th>Website</th>
+      <th>Acties</th>
     </tr>
   </thead>
   <tbody>
@@ -19,6 +20,7 @@
       <td>{{contact.phone}}</td>
       <td>{{contact.fax}}</td>
       <td>{{contact.website}}</td>
+      <td><i class="fa fa-pencil"></i><i class="fa fa-trash" (click)="deleteContact(contact)"></i></td>
     </tr>
   </tbody>
 </table>
