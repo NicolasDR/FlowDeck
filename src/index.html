@@ -25,6 +25,7 @@
 	
 	});
 	
+	
 function OpenSetNav(icon) {
 
 	document.getElementById("wrapper").style.display = "block";
@@ -54,12 +55,16 @@ function OpenSetNav(icon) {
 		}	
 	
 	    $('html').css({overflow: 'hidden'});
-
+		
+		setTimeout(function(){ 
+				$("#sn-close").fadeTo( "slow" ,1);
+			}, 500);
 }
 
 function CloseSetNav() {
+		$("#sn-close").fadeTo( "fast" ,0);
 		$("#wrapper").fadeTo( "slow",0);
-	$(".sn").animate({
+		$(".sn").animate({
                 width: "toggle"
             });
 			 $('html').css({overflow: 'scroll'});
