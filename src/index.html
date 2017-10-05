@@ -25,8 +25,51 @@
 	
 	});
 	
-function openSetNav() {
-    document.getElementById("sidenav-settings").style.width = "250px";
+function OpenSetNav(icon) {
+
+	document.getElementById("wrapper").style.display = "block";
+	$("#wrapper").fadeTo( "slow" ,0.3);
+	$(".sn").animate({
+                width: "toggle"
+            });
+		if (icon == "calendar"){
+		document.getElementById("sn-title").innerHTML = "Agenda";
+		}
+	
+		else if (icon == "sett1"){
+		document.getElementById("sn-title").innerHTML = "Instellingen";
+		}
+	
+		else if (icon == "sett2"){
+		document.getElementById("sn-title").innerHTML = "Instellingen Contacten";
+		}
+	
+		else if (icon == "addnew"){
+		document.getElementById("sn-title").innerHTML = "Nieuw Contact Toevoegen";
+		document.getElementById("sn-newcontact").style.display = "block";
+		}
+		
+		else {
+		alert("Foutje");
+		}	
+	
+	    $('html').css({overflow: 'hidden'});
+
+}
+
+function CloseSetNav() {
+		$("#wrapper").fadeTo( "slow",0);
+	$(".sn").animate({
+                width: "toggle"
+            });
+			 $('html').css({overflow: 'scroll'});
+			 
+			setTimeout(function(){ 
+				document.getElementById("wrapper").style.display = "none";
+				document.getElementById("sn-newcontact").style.display = "none"; 
+			}, 500);
+			
+
 }
 
  </script>

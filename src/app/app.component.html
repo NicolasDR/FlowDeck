@@ -6,12 +6,21 @@
       <img class="logo" src="../assets/images/logo.png" alt="logo" />
     </div>
     <div id="ctrls_container" class="col-xs-2">
-      <i class="fa fa-calendar"></i>
-      <i class="fa fa-sliders" OnClick="OpenSetNav()"></i>
+      <i class="fa fa-calendar" OnClick="OpenSetNav('calendar')"></i>
+      <i class="fa fa-sliders" OnClick="OpenSetNav('sett1')"></i>
     </div>
 
-	<div id="sidenav-settings">
+	<div class="sn">
+		<div class="sn-container">
+			<h2 id="sn-title"></h2>
+			<i class="fa fa-times" id="sn-close" OnClick="CloseSetNav()"></i>
+			<div id="sn-newcontact" class="sn-body">
+			<app-contact-new></app-contact-new>
+			</div>
+		</div>
+	</div>
 	
+	<div id="wrapper" OnClick="CloseSetNav()">
 	</div>
 	
        <div id="nav_container" class="col-xs-12">
