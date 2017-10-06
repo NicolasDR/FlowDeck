@@ -5,7 +5,7 @@
     <div class="col-xs-8">
       <img class="logo" src="../assets/images/logo.png" alt="logo" />
     </div>
-    <div id="ctrls_container" class="col-xs-2">
+    <div class="col-xs-1 ctrls_container">
       <i class="fa fa-calendar" OnClick="OpenSetNav('calendar')"></i>
       <i class="fa fa-sliders" OnClick="OpenSetNav('sett1')"></i>
     </div>
@@ -19,23 +19,25 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div id="wrapper" OnClick="CloseSetNav()">
 	</div>
-	
-       <div id="nav_container" class="col-xs-12">
-      <nav>
-        <a routerLink="/" routerLinkActive="active" Onclick="checklink()"><img class="home-icon" src="../assets/images/homeicon.png"/></a>
-        <a routerLink="/facturen" routerLinkActive="active" class="nava" id="factuur" Onclick="checklink()"><i class="fa fa-paperclip"></i>Facturen</a>
-        <a routerLink="/klanten" routerLinkActive="active" class="nava" id="klant" Onclick="checklink()"><i class="fa fa-user-o"></i>Klanten</a>
-        <a routerLink="/offertes" routerLinkActive="active" class="nava" id="offerte" Onclick="checklink()"><i class="fa fa-paper-plane-o"></i>Offertes</a>
-        <a routerLink="/producten" routerLinkActive="active" class="nava" id="product" Onclick="checklink()"><i class="fa fa-diamond"></i>Producten</a>
-        <a routerLink="/projecten" routerLinkActive="active" class="nava" id="project" Onclick="checklink()"><i class="fa fa-folder-open-o"></i>Projecten</a>
-        <a routerLink="/contact" routerLinkActive="active" class="nava" id="contact" Onclick="checklink()"><i class="fa fa-address-book-o"></i>Contacten</a>
-      </nav>
+
+      <div id="nav_container" class="col-xs-12">
+        <div class="row">
+          <nav class="col-xs-10 col-xs-offset-1">
+            <a routerLink="/" routerLinkActive="active" Onclick="checklink()"><img class="home-icon" src="../assets/images/homeicon.png"/></a>
+            <a routerLink="/facturen" routerLinkActive="active" class="nava" id="factuur" Onclick="checklink()"><i class="fa fa-paperclip"></i>Facturen</a>
+            <a routerLink="/klanten" routerLinkActive="active" class="nava" id="klant" Onclick="checklink()"><i class="fa fa-user-o"></i>Klanten</a>
+            <a routerLink="/offertes" routerLinkActive="active" class="nava" id="offerte" Onclick="checklink()"><i class="fa fa-paper-plane-o"></i>Offertes</a>
+            <a routerLink="/producten" routerLinkActive="active" class="nava" id="product" Onclick="checklink()"><i class="fa fa-diamond"></i>Producten</a>
+            <a routerLink="/projecten" routerLinkActive="active" class="nava" id="project" Onclick="checklink()"><i class="fa fa-folder-open-o"></i>Projecten</a>
+            <a routerLink="/contact" routerLinkActive="active" class="nava" id="contact" Onclick="checklink()"><i class="fa fa-address-book-o"></i>Contacten</a>
+          </nav>
+        </div>
     </div>
-	
-	
+
+
     <div id="information" class="col-xs-12">
       <router-outlet></router-outlet>
     </div>
@@ -45,4 +47,3 @@
       <app-actions></app-actions>
     </div>-->
   </div>
-  

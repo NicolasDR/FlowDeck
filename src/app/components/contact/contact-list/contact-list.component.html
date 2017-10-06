@@ -20,7 +20,9 @@
       <td>{{contact.phone}}</td>
       <td>{{contact.fax}}</td>
       <td>{{contact.website}}</td>
-      <td><i class="fa fa-pencil"></i><i class="fa fa-trash" (click)="deleteContact(contact)"></i></td>
+      <td><i class="fa fa-pencil tbl-actions"></i>
+        <i class="fa fa-trash tbl-actions" (click)="deleteContact(contact)"></i>
+      </td>
     </tr>
   </tbody>
 </table>
