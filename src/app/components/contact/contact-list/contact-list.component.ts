@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Contact } from '../contact';
 import { ContactService } from '../contact.service';
 
@@ -18,16 +18,14 @@ export class ContactListComponent implements OnInit {
   }
 
   getContacten(){
-    this.contactService.getContacten()
-    .subscribe((contacten)=>{
+    this.contactService.getContacten();
+    this.contactService.contacten.subscribe(contacten => {
       this.contacten = contacten;
-    });
+    })
   }
 
   deleteContact(c){
-    this.contactService.delete(c).subscribe(res=> {
-      this.getContacten();  // this is function who makes GET request
-    });
+    this.contactService.delete(c);
   }
 
 }

@@ -3,36 +3,51 @@ import { HttpClient } from '@angular/common/http';
 import { Contact } from './contact';
 import "rxjs";
 import { Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class ContactService {
 
   private root = "https://flowdeck.be/datasrc";
+  public _contacten = new BehaviorSubject(null);
 
   constructor(private http: HttpClient) { }
 
   create(contact: Contact){
-    return this.http.post(this.root + "/contacten", contact)
-    .subscribe(success => {
-      this.getContacten()
-    })
+    this.http.post(this.root + "/contacten", contact).subscribe(res => {
+      this.getContacten();
+    });
   }
 
   update(contact: Contact){
-    return this.http.delete(this.root + "/contacten/" + contact.id)
+    this.http.delete(this.root + "/contacten/" + contact.id)
   }
 
   delete(contact: Contact){
-    return this.http.delete(this.root + "/contacten/" + contact.id)
+    this.http.delete(this.root + "/contacten/" + contact.id).subscribe(res => {
+      this.getContacten();
+    });
   }
 
   getContacten(){
-    return this.http.get(this.root + "/contacten")
+
+    this.http.get(this.root + "/contacten").subscribe( contacten => {
+      this._contacten.next(contacten);
+    });
+
   }
 
   getContact(contact: Contact){
     return this.http.get(this.root + "/contacten/" + contact.id)
+  }
+
+  set contacten(value:any) {
+    this._contacten = value;
+  }
+
+  get contacten():any {
+    return this._contacten;
   }
 
 }

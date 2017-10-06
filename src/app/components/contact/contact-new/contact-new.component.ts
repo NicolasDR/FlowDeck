@@ -17,6 +17,11 @@ export class ContactNewComponent implements OnInit {
 
   }
 
+  getContacten(){
+    this.contactService.getContacten();
+    this.contacten = this.contactService._contacten;
+  }
+
   contactToevoegen(form: any){
     var firstName = form.value.firstName;
     var name = form.value.name;
@@ -38,6 +43,8 @@ export class ContactNewComponent implements OnInit {
     );
 
     this.contactService.create(contact);
+    this.contactService.getContacten();
+    this.contacten = this.contactService._contacten;
   };
 
 }
