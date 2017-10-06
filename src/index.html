@@ -21,9 +21,18 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
  $(document).ready(function(){
-	checklink();	
+	checklink();
 	});
-	
+
+function addnewcontact(){
+	CloseSetNav();
+	$(".form-control").val("");
+}	
+
+function navdoubleclickerror(){
+/*TO RESOLVE*/
+CloseSetNav();
+}
 	
 function checklink(){
 setTimeout(function(){ 
@@ -48,9 +57,8 @@ function OpenSetNav(icon) {
 
 	document.getElementById("wrapper").style.display = "block";
 	$("#wrapper").fadeTo( "slow" ,0.3);
-	$(".sn").animate({
-                width: "toggle"
-            });
+	
+	$(".sn").animate({width: "toggle"});
 		if (icon == "calendar"){
 		document.getElementById("sn-title").innerHTML = "Agenda";
 		}
@@ -80,6 +88,8 @@ function OpenSetNav(icon) {
 }
 
 function CloseSetNav() {
+
+
 		$("#sn-close").fadeTo( "fast" ,0);
 		$("#wrapper").fadeTo( "slow",0);
 		$(".sn").animate({
@@ -92,7 +102,6 @@ function CloseSetNav() {
 				document.getElementById("sn-newcontact").style.display = "none"; 
 			}, 500);
 			
-
 }
 
  </script>
