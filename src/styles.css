@@ -137,7 +137,9 @@ h2{
 
 .fa-plus{background-color:#EAD11B; color:white; width:100px;}
 
-.ctrls_container .fa-plus:hover {background-color:#EAD11B; margin-left:-70px;}
+.ctrls_container .fa-plus:hover {background-color:#EAD11B; margin-left:-70px; width:51%}
+
+.plustext{display:none; float: right; font-weight: bold; font-family: "Varela Round"; padding:0; margin-top:-1px; margin-left:2px;}
 
 #information{
   background-color: #F8F9FA;
@@ -174,8 +176,8 @@ display:none;
 .sn-container{display:block; padding-right:8%; margin-left:5%; position:absolute; width:100%;padding-bottom:50px;}
 
 .sn-body{
-	display: none;
-	padding-bottom:200px;
+	display:none;
+	padding-bottom:200px;	
 	}
 
 #sn-close{display:block; float:right; font-size:30px; cursor:pointer; margin-top:40px; margin-right:4%; opacity:0;}
@@ -184,3 +186,4 @@ display:none;
 
 .btn-primary{background-color:#3a3a3a; color:white; width:80%; margin-left:auto; margin-right:auto;}
 .btn-primary:hover{background-color:#545454; color:white;}
+

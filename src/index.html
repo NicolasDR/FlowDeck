@@ -29,6 +29,13 @@ function addnewcontact(){
 	$(".form-control").val("");
 }	
 
+function hidep(){
+$(".plustext").css({display: 'block'});
+$(".fa-plus").mouseout(function() {
+    $(".plustext").css({display: 'none'});
+  });
+}
+
 function navdoubleclickerror(){
 /*TO RESOLVE*/
 CloseSetNav();
@@ -67,10 +74,6 @@ function OpenSetNav(icon) {
 		document.getElementById("sn-title").innerHTML = "Instellingen";
 		}
 	
-		else if (icon == "sett2"){
-		document.getElementById("sn-title").innerHTML = "Instellingen Contacten";
-		}
-	
 		else if (icon == "addnew"){
 		document.getElementById("sn-title").innerHTML = "Nieuw Contact Toevoegen";
 		document.getElementById("sn-newcontact").style.display = "block";
@@ -89,18 +92,20 @@ function OpenSetNav(icon) {
 
 function CloseSetNav() {
 
-
 		$("#sn-close").fadeTo( "fast" ,0);
-		$("#wrapper").fadeTo( "slow",0);
-		$(".sn").animate({
+		setTimeout(function(){ 
+			$("#wrapper").fadeTo( "slow",0);
+			$(".sn").animate({
                 width: "toggle"
             });
-			 $('html').css({overflow: 'scroll'});
+			 $('html').css({overflow: 'auto'});
+			 
 			 
 			setTimeout(function(){ 
 				document.getElementById("wrapper").style.display = "none";
 				document.getElementById("sn-newcontact").style.display = "none"; 
-			}, 500);
+			}, 500);}, 
+		100);
 			
 }
 
