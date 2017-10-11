@@ -1,4 +1,4 @@
-<table class="table">
+<!--<table class="table">
   <thead>
     <tr>
       <th>#</th>
@@ -20,9 +20,27 @@
       <td>{{contact.phone}}</td>
       <td>{{contact.fax}}</td>
       <td>{{contact.website}}</td>
-      <td><i class="fa fa-pencil tbl-actions"></i>
+      <td><i class="fa fa-pencil tbl-actions" (click)="editContact()"></i>
         <i class="fa fa-trash tbl-actions" (click)="deleteContact(contact)"></i>
       </td>
     </tr>
   </tbody>
-</table>
+</table>-->
+
+<div class="row">
+
+<div class="col-xs-12">
+
+<ngx-datatable
+    [count]="rowCount"
+    [rows]="rows"
+    [columns]="columns"
+    [footerHeight]=30
+    [limit]=5
+    [columnMode]="'force'"
+    [rowHeight]="'auto'"
+>
+</ngx-datatable>
+
+</div>
+</div>

@@ -16,6 +16,11 @@ import { ContactDetailsComponent } from './components/contact/contact-details/co
 import { ContactListComponent } from './components/contact/contact-list/contact-list.component';
 import { ContactNewComponent } from './components/contact/contact-new/contact-new.component';
 
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { SlidePanelComponent } from './components/slide-panel/slide-panel.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 const appRoutes: Routes = [
   { path: 'bedrijven', component: BedrijvenComponent },
   { path: 'contact', component: ContactComponent },
@@ -30,14 +35,17 @@ const appRoutes: Routes = [
     ContactComponent,
     ContactDetailsComponent,
     ContactListComponent,
-    ContactNewComponent
+    ContactNewComponent,
+    SlidePanelComponent
   ],
   imports: [
+    NgxDatatableModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [DataService, ContactService],
   bootstrap: [AppComponent]

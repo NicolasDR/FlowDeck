@@ -12,7 +12,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^4.1.0",
+    "@angular/animations": "^4.4.4",
     "@angular/common": "^4.1.0",
     "@angular/compiler": "^4.1.0",
     "@angular/core": "^4.1.0",
@@ -21,9 +21,13 @@
     "@angular/platform-browser": "^4.1.0",
     "@angular/platform-browser-dynamic": "^4.1.0",
     "@angular/router": "^4.1.0",
+    "@swimlane/ngx-datatable": "^10.2.3",
     "angular-4-data-table-bootstrap-4": "0.0.1",
     "core-js": "^2.4.1",
+    "font-awesome": "^4.7.0",
+    "fontawesome": "^4.7.2",
     "rxjs": "^5.4.2",
+    "typescript": "^2.5.3",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {

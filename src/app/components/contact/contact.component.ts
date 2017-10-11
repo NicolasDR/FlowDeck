@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Contact } from './contact';
 import { ContactService } from './contact.service';
 
@@ -10,13 +10,21 @@ import { ContactService } from './contact.service';
 export class ContactComponent implements OnInit {
 
   contacten: any;
+  isVisible;
 
-  constructor(private contactService: ContactService) { }
+  constructor(private contactService: ContactService) {
+
+    this.isVisible = 'closed';
+
+  }
 
   ngOnInit() {
 
   }
 
+  change(){
+    this.isVisible = 'open';
+  }
 
 
 }

@@ -10,6 +10,8 @@
       <i class="fa fa-sliders" OnClick="OpenSetNav('sett1')"></i>
     </div>
 
+<<<<<<< HEAD
+=======
 	<div class="sn">
 		<div class="sn-container">
 			<h2 id="sn-title"></h2>
@@ -17,12 +19,15 @@
 			<div id="sn-newcontact" class="sn-body">
 			<app-contact-new></app-contact-new>
 			</div>
+			<div id="sn-agenda" class="sn-body">
+			</div>
 		</div>
 	</div>
 
-	<div id="wrapper" OnClick="CloseSetNav()">
+	<div id="wrapper" OnClick="CloseSetNav()" ondblclick="navdoubleclickerror()">
 	</div>
 
+>>>>>>> cefb09e2693b523e2e4a4215775e994b6e3639ae
       <div id="nav_container" class="col-xs-12">
         <div class="row">
           <nav class="col-xs-10 col-xs-offset-1">
@@ -36,7 +41,6 @@
           </nav>
         </div>
     </div>
-
 
     <div id="information" class="col-xs-12">
       <router-outlet></router-outlet>
