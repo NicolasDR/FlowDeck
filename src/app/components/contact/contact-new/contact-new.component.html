@@ -57,6 +57,13 @@
     <input ngModel type="text" class="form-control" name="bic" id="ci_bic" placeholder="">
   </div>
   <div class="col-md-6">
-  <button type="submit" OnClick="addnewcontact()" class="btn btn-primary">Toevoegen</button>
+    <button *ngIf="editContact; else newContact" type="submit" (click)="contactAanpassen()" class="btn btn-primary">
+      <span>Aanpassen</span>
+    </button>
+    <ng-template #newContact>
+      <button type="submit" (click)="contactToevoegen()" class="btn btn-primary">
+        <span>Toevoegen</span>
+      </button>
+    </ng-template>
   </div>
 </form>

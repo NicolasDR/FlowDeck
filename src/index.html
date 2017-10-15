@@ -15,20 +15,11 @@
       <app-root></app-root>
     </div>
   </div>
-<<<<<<< HEAD
-=======
-  <!-- --------------------------------------------------------SCRIPTS---------------------------------------------------------------------------------------------------- -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <script>
  $(document).ready(function(){
 	checklink();
 	});
-
-function addnewcontact(){
-	CloseSetNav();
-	$(".form-control").val("");
-}	
 
 function hidep(){
 $(".plustext").css({display: 'block'});
@@ -37,81 +28,26 @@ $(".fa-plus").mouseout(function() {
   });
 }
 
-function navdoubleclickerror(){
-/*TO RESOLVE*/
-CloseSetNav();
-}
-	
 function checklink(){
-setTimeout(function(){ 
+setTimeout(function(){
 				var path=window.location.pathname;
-			
+
 	var elements=document.getElementsByClassName("nava");
 	 for(var i = 0, length = elements.length; i < length; i++) {
           elements[i].style.color = "#1e1e1e";
-       } 
+       }
 	if(path==="/contact"){
 	document.getElementById("contact").style.textDecoration = "none";
 	document.getElementById("contact").style.color = "white";
 	}
-	
+
 	else if(path==="/facturen"){
 	document.getElementById("factuur").style.textDecoration = "none";
 	document.getElementById("factuur").style.color = "white";
 	}}, 0);
-}	
-	
-function OpenSetNav(icon) {
-
-	document.getElementById("wrapper").style.display = "block";
-	$("#wrapper").fadeTo( "slow" ,0.3);
-	
-	$(".sn").animate({width: "toggle"});
-		if (icon == "calendar"){
-		document.getElementById("sn-title").innerHTML = "Agenda";
-		}
-	
-		else if (icon == "sett1"){
-		document.getElementById("sn-title").innerHTML = "Instellingen";
-		}
-	
-		else if (icon == "addnew"){
-		document.getElementById("sn-title").innerHTML = "Nieuw Contact Toevoegen";
-		document.getElementById("sn-newcontact").style.display = "block";
-		}
-		
-		else {
-		alert("Foutje");
-		}	
-	
-	    $('html').css({overflow: 'hidden'});
-		
-		setTimeout(function(){ 
-				$("#sn-close").fadeTo( "slow" ,1);
-			}, 500);
-}
-
-function CloseSetNav() {
-
-		$("#sn-close").fadeTo( "fast" ,0);
-		setTimeout(function(){ 
-			$("#wrapper").fadeTo( "slow",0);
-			$(".sn").animate({
-                width: "toggle"
-            });
-			 $('html').css({overflow: 'auto'});
-			 
-			 
-			setTimeout(function(){ 
-				document.getElementById("wrapper").style.display = "none";
-				document.getElementById("sn-newcontact").style.display = "none"; 
-			}, 500);}, 
-		100);
-			
 }
 
  </script>
->>>>>>> cefb09e2693b523e2e4a4215775e994b6e3639ae
 
 </body>
 

@@ -26,5 +26,9 @@ export class ContactComponent implements OnInit {
     this.isVisible = 'open';
   }
 
+  onEditClick(dinges){
+    console.log(dinges);
+  }
+
 
 }

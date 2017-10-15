@@ -7,16 +7,15 @@
 
 	<div class="change-menu">
 		<div class="col-xs-2 ctrls_container">
-<<<<<<< HEAD
-		<i class="fa fa-plus" (click)="activePane = 'open'"></i>
+
 		<i class="fa fa-cogs" OnClick="OpenSetNav('sett2')"></i>
-=======
-		<i class="fa fa-plus" OnClick="OpenSetNav('addnew')" onmouseover="hidep()"><p class="plustext">Voeg toe<p></i>
->>>>>>> cefb09e2693b523e2e4a4215775e994b6e3639ae
+
+		<i class="fa fa-plus" (click)="activePane = 'open'" onmouseover="hidep()"><p class="plustext">Voeg toe<p></i>
+
 		<i class="fa fa-download"></i>
 		</div>
 	</div>
-<app-contact-list></app-contact-list>
+<app-contact-list (editClick)="onEditClick($event)"></app-contact-list>
 
 </div>
 </div>

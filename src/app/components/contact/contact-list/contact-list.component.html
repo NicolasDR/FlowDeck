@@ -1,46 +1,23 @@
-<!--<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Naam</th>
-      <th>Adres</th>
-      <th>E-mail</th>
-      <th>Telefoon</th>
-      <th>Fax</th>
-      <th>Website</th>
-      <th>Acties</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let contact of contacten">
-      <td>{{contact.id}}</td>
-      <td>{{contact.name}}</td>
-      <td>{{contact.address}}</td>
-      <td>{{contact.email}}</td>
-      <td>{{contact.phone}}</td>
-      <td>{{contact.fax}}</td>
-      <td>{{contact.website}}</td>
-      <td><i class="fa fa-pencil tbl-actions" (click)="editContact()"></i>
-        <i class="fa fa-trash tbl-actions" (click)="deleteContact(contact)"></i>
-      </td>
-    </tr>
-  </tbody>
-</table>-->
-
 <div class="row">
-
 <div class="col-xs-12">
 
-<ngx-datatable
-    [count]="rowCount"
-    [rows]="rows"
-    [columns]="columns"
-    [footerHeight]=30
-    [limit]=5
-    [columnMode]="'force'"
-    [rowHeight]="'auto'"
->
-</ngx-datatable>
+  <ngx-datatable
+      [count]="rowCount"
+      [rows]="rows"
+      [columns]="columns"
+      [footerHeight]=30
+      [limit]=5
+      [columnMode]="'force'"
+      [rowHeight]="'auto'">
+  </ngx-datatable>
+
+  <ng-template #sampleT2 let-row="row" let-value="value" let-i="index">
+    <div class="avatar"></div>
+  </ng-template>
+
+  <ng-template #sampleT let-row="row" let-value="value" let-i="index">
+    <i class="fa fa-pencil" (click)="editContact(row)"></i><i class="fa fa-trash" (click)="deleteContact(row)"></i> {{value}}
+  </ng-template>
 
 </div>
 </div>

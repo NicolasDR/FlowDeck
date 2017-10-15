@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Contact } from '../contact';
 import { ContactService } from '../contact.service';
 
@@ -10,6 +10,7 @@ import { ContactService } from '../contact.service';
 export class ContactNewComponent implements OnInit {
 
   contacten: any;
+  @Input('testerino') editContact: any = false;
 
   constructor(private contactService: ContactService) { }
 

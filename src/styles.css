@@ -87,6 +87,24 @@ h2{
   margin-top: 100px;
 }
 
+.ngx-datatable .fa{
+  color: #D2D2D2;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.ngx-datatable .avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #D2D2D2;
+}
+
+.ngx-datatable .fa:hover{
+  cursor: pointer;
+  color: #333;
+}
+
 .ngx-datatable{
   margin-top:50px;
   margin-bottom: 100px;
@@ -110,7 +128,7 @@ h2{
 .datatable-body-cell-label{
   padding-top: 14px;
   padding-bottom: 10px;
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
 .datatable-header-cell{
@@ -188,14 +206,12 @@ display:none;
 .fa-sliders{
   margin-right: 15px;
 }
-<<<<<<< HEAD
-=======
 
 .sn-container{display:block; padding-right:8%; margin-left:5%; position:absolute; width:100%;padding-bottom:50px;}
 
 .sn-body{
 	display:none;
-	padding-bottom:200px;	
+	padding-bottom:200px;
 	}
 
 #sn-close{display:block; float:right; font-size:30px; cursor:pointer; margin-top:40px; margin-right:4%; opacity:0;}
@@ -204,5 +220,3 @@ display:none;
 
 .btn-primary{background-color:#3a3a3a; color:white; width:80%; margin-left:auto; margin-right:auto;}
 .btn-primary:hover{background-color:#545454; color:white;}
-
->>>>>>> cefb09e2693b523e2e4a4215775e994b6e3639ae
