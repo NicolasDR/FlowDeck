@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, TemplateRef} from '@angular/core';
+import { Component, OnInit, ViewChild, TemplateRef, EventEmitter, Output} from '@angular/core';
 import { Contact } from '../contact';
 import { ContactService } from '../contact.service';
 
@@ -12,7 +12,7 @@ export class ContactListComponent implements OnInit {
   contacten: any;
   @ViewChild('sampleT') public sampleT: TemplateRef<any>;
   @ViewChild('sampleT2') public sampleT2: TemplateRef<any>;
-  _editContact: any;
+  @Output() editClick = new EventEmitter<any>();
 
   rowCount = 0;
   rows = [];
@@ -52,8 +52,8 @@ export class ContactListComponent implements OnInit {
     })
   }
 
-  editContact(c){
-
+  onEditClick(c){
+    this.editClick.emit(c);
   }
 
   deleteContact(c){

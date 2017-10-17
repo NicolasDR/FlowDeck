@@ -16,7 +16,7 @@
   </ng-template>
 
   <ng-template #sampleT let-row="row" let-value="value" let-i="index">
-    <i class="fa fa-pencil" (click)="editContact(row)"></i><i class="fa fa-trash" (click)="deleteContact(row)"></i> {{value}}
+    <i class="fa fa-pencil" (click)="onEditClick(row)"></i><i class="fa fa-trash" (click)="deleteContact(row)"></i> {{value}}
   </ng-template>
 
 </div>

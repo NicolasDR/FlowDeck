@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { OnInit } from '@angular/core';
+import { Input } from '@angular/core';
 import { Contact } from '../contact';
 import { ContactService } from '../contact.service';
 
@@ -10,17 +12,40 @@ import { ContactService } from '../contact.service';
 export class ContactNewComponent implements OnInit {
 
   contacten: any;
-  @Input('testerino') editContact: any = false;
+  @Input('edit') isEdit: any = false;
+  @Input('editContact') _editContact: any = {
+    id: 0,
+    name: "test",
+    firstName: "test",
+    street: "test",
+    houseNumber: "test",
+    country: "test",
+    province: "test",
+    website: "test",
+    fax: "test",
+    phone: "test",
+    iban: "test",
+    postalCode: "test"
+  };
+  testerino: any = {
+    name: 'testerino'
+  };
+
 
   constructor(private contactService: ContactService) { }
 
   ngOnInit() {
-
+    console.log(this.testerino);
   }
 
   getContacten(){
     this.contactService.getContacten();
     this.contacten = this.contactService._contacten;
+  }
+
+  getContact(id){
+    this.contactService.getContact(id);
+    this._editContact = this.contactService._contact;
   }
 
   contactToevoegen(form: any){
@@ -47,5 +72,11 @@ export class ContactNewComponent implements OnInit {
     this.contactService.getContacten();
     this.contacten = this.contactService._contacten;
   };
+
+  ngOnChanges() {
+    if(this._editContact != null){
+      console.log(this._editContact);
+    }
+  }
 
 }

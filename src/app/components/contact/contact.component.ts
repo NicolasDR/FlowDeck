@@ -10,24 +10,24 @@ import { ContactService } from './contact.service';
 export class ContactComponent implements OnInit {
 
   contacten: any;
-  isVisible;
+  activePane;
+  contactDetails: any;
+  isEdit: any;
 
   constructor(private contactService: ContactService) {
-
-    this.isVisible = 'closed';
-
   }
 
   ngOnInit() {
 
   }
 
-  change(){
-    this.isVisible = 'open';
-  }
-
-  onEditClick(dinges){
-    console.log(dinges);
+  onEditClick(contact){
+    this.activePane = 'open';
+    this.isEdit = true;
+    this.contactService.getContact(contact.id);
+    this.contactService.contact.subscribe(contact => {
+      this.contactDetails = contact;
+    })
   }
 
 

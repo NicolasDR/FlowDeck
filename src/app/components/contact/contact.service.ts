@@ -11,6 +11,7 @@ export class ContactService {
 
   private root = "https://flowdeck.be/datasrc";
   public _contacten = new BehaviorSubject(null);
+  public _contact = new BehaviorSubject(null);
 
   constructor(private http: HttpClient) { }
 
@@ -32,14 +33,16 @@ export class ContactService {
 
   getContacten(){
 
-    this.http.get(this.root + "/contacten").subscribe( contacten => {
+    this.http.get(this.root + "/contacten/").subscribe( contacten => {
       this._contacten.next(contacten);
     });
 
   }
 
-  getContact(contact: Contact){
-    return this.http.get(this.root + "/contacten/" + contact.id)
+  getContact(id: any){
+    this.http.get(this.root + "/contacten/" + id).subscribe( contact => {
+      this._contact.next(contact[0]);
+    });
   }
 
   set contacten(value:any) {
@@ -48,6 +51,14 @@ export class ContactService {
 
   get contacten():any {
     return this._contacten;
+  }
+
+  set contact(value:any) {
+    this._contact = value;
+  }
+
+  get contact():any {
+    return this._contact;
   }
 
 }

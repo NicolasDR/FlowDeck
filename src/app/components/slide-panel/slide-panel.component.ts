@@ -22,6 +22,8 @@ export class SlidePanelComponent implements OnInit {
 
   private currentActivePane: PanelState;
   @Output() activePaneChange: EventEmitter<PanelState> = new EventEmitter<PanelState>();
+  @Input('edit') isEdit: any = false;
+  @Input('contact') contactDetails: any;
 
   constructor() {
 
@@ -38,7 +40,12 @@ export class SlidePanelComponent implements OnInit {
   get activePane(): PanelState {
       return this.currentActivePane;
   }
-  
+
+  /*
+  ngOnChanges(changes: any) {
+    console.log(this.isEdit);
+  }
+  */
 
 }
 
